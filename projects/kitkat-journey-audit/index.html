@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KitKat Journey Audit — Luiz Ribeiro</title>
+<meta name="description" content="Quando o problema não era o usuário — era o dado.">
+<link rel="icon" type="image/png" sizes="32x32" href="../../static/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../static/images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo">Luiz<span class="logo-dot">.</span></a>
+    <ul class="nav-links">
+      
+      <li><a href="../../index.html" class="nav-link">← Voltar ao início</a></li>
+      <li><a href="../../index.html#projects" class="nav-link">Projetos</a></li>
+      <li><a href="../../index.html#contact" class="nav-link">Contato</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+
+<header class="case-hero">
+  <div class="hero-bg"></div>
+  <div class="container case-hero-inner">
+    <a href="../../index.html#projects" class="case-breadcrumb" data-aos="fade-in">← Projetos</a>
+    <p class="section-label" data-aos="fade-up">Estudo de caso</p>
+    <h1 class="case-title" data-aos="fade-up">KitKat Journey Audit</h1>
+    <p class="case-subtitle" data-aos="fade-up" data-aos-delay="80">Quando o problema não era o usuário — era o dado.</p>
+    <div class="case-meta" data-aos="fade-up" data-aos-delay="160">
+      
+      <div class="case-meta-item">
+        <span class="case-meta-label">Período</span>
+        <span class="case-meta-value">2025</span>
+      </div>
+      
+      <div class="case-meta-item">
+        <span class="case-meta-label">Função</span>
+        <span class="case-meta-value">Estruturação da camada analítica</span>
+      </div>
+      
+      <div class="case-meta-item">
+        <span class="case-meta-label">Natureza</span>
+        <span class="case-meta-value">Auditoria e investigação de dados</span>
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section-compact section-alt">
+    <div class="container">
+      <div class="case-summary">
+        <div class="case-summary-block" data-aos="fade-up">
+          <span class="project-block-label">Desafio</span>
+          <p>Identificar quedas de conversão durante o processo de cadastro da campanha.</p>
+        </div>
+        <div class="case-summary-block" data-aos="fade-up" data-aos-delay="80">
+          <span class="project-block-label">Solução</span>
+          <p>Análise detalhada da jornada digital e validação da implementação de rastreamento.</p>
+        </div>
+        <div class="case-summary-block case-summary-result" data-aos="fade-up" data-aos-delay="160">
+          <span class="project-block-label">Resultado</span>
+          <p>Identificação de erro técnico que impactava a leitura dos indicadores da campanha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-body">
+      
+      <article class="case-section" data-aos="fade-up">
+        <h2 class="case-section-title">Contexto</h2>
+        <p class="case-section-body">Campanhas promocionais de grandes marcas costumam pedir que o consumidor se cadastre em um site — enviando a foto da nota fiscal, por exemplo — para concorrer a prêmios. Esse cadastro acontece em várias etapas sequenciais, e cada etapa é registrada por um código de rastreamento instalado no site. A campanha do KitKat era a principal ação da marca naquele ano.</p>
+      </article>
+      
+      <article class="case-section" data-aos="fade-up">
+        <h2 class="case-section-title">Minha responsabilidade</h2>
+        <p class="case-section-body">Eu estruturava a camada analítica da campanha: definia quais eventos deveriam ser monitorados, desenhava as regras de negócio e determinava quais métricas acompanhariam a evolução dos usuários ao longo da jornada. A implementação técnica ficava com o time de engenharia — meu papel era garantir que o que estava sendo medido fizesse sentido.</p>
+      </article>
+      
+      <article class="case-section" data-aos="fade-up">
+        <h2 class="case-section-title">O sinal de alerta</h2>
+        <p class="case-section-body">Acompanhando a evolução dos usuários pela jornada, notei que uma das etapas apresentava um volume de registros muito acima do esperado em relação às demais. À primeira vista, a leitura era preocupante: parecia haver uma desistência em massa logo após aquele ponto. Mas os números não fechavam quando comparados ao restante do funil — a conta simplesmente não fazia sentido.</p>
+      </article>
+      
+      <article class="case-section" data-aos="fade-up">
+        <h2 class="case-section-title">A investigação</h2>
+        <p class="case-section-body">Em vez de reportar a queda como um fato, levei a inconsistência ao cliente e investiguei junto ao time responsável pela implementação do rastreamento. Descobrimos que o código daquela etapa estava configurado incorretamente: ele registrava diversas interações do usuário que não representavam avanço real na jornada, inflando artificialmente o volume daquele estágio e criando a ilusão de um abandono que não existia.</p>
+      </article>
+      
+      <article class="case-section" data-aos="fade-up">
+        <h2 class="case-section-title">O resultado</h2>
+        <p class="case-section-body">Após a correção da implementação, a jornada passou a ser medida corretamente. A taxa real de conclusão da campanha era de 54,5% — e não os 37,5% que os dados incorretos indicavam. Mais importante que o número: o cliente evitou redirecionar investimento de mídia e redesenhar uma etapa do cadastro para resolver um problema que nunca existiu.</p>
+      </article>
+      
+    </div>
+  </section>
+
+  
+
+  
+  <section class="section">
+    <div class="container">
+      <p class="section-label" data-aos="fade-up">Visão técnica</p>
+      <h2 class="section-title" data-aos="fade-up">O raciocínio da investigação</h2>
+      <div class="case-flow">
+        
+        <div class="case-flow-step" data-aos="fade-up" data-aos-delay="0">Anomalia no funil</div>
+        <div class="case-flow-arrow" aria-hidden="true">→</div>
+        
+        <div class="case-flow-step" data-aos="fade-up" data-aos-delay="80">Questionamento do dado</div>
+        <div class="case-flow-arrow" aria-hidden="true">→</div>
+        
+        <div class="case-flow-step" data-aos="fade-up" data-aos-delay="160">Investigação técnica</div>
+        <div class="case-flow-arrow" aria-hidden="true">→</div>
+        
+        <div class="case-flow-step" data-aos="fade-up" data-aos-delay="240">Correção da medição</div>
+        <div class="case-flow-arrow" aria-hidden="true">→</div>
+        
+        <div class="case-flow-step" data-aos="fade-up" data-aos-delay="320">Leitura confiável</div>
+        
+        
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section section-alt">
+    <div class="container case-bottom">
+      <div class="case-learnings">
+        <p class="section-label" data-aos="fade-up">Reflexão</p>
+        <h2 class="section-title" data-aos="fade-up">Aprendizados</h2>
+        <ul class="learnings-list">
+          
+          <li data-aos="fade-up" data-aos-delay="0">Antes de explicar um número estranho, vale checar se o número está certo.</li>
+          
+          <li data-aos="fade-up" data-aos-delay="70">O papel do analista não é só reportar dados — é garantir que eles sejam confiáveis.</li>
+          
+          <li data-aos="fade-up" data-aos-delay="140">Um erro de medição não corrigido gera decisões de negócio caras e equivocadas.</li>
+          
+          <li data-aos="fade-up" data-aos-delay="210">Levar a dúvida ao cliente com transparência constrói mais confiança do que entregar um relatório impecável e errado.</li>
+          
+        </ul>
+      </div>
+      <aside class="case-stack" data-aos="fade-up" data-aos-delay="100">
+        <span class="case-stack-label">Stack utilizada</span>
+        <div class="project-tags">
+          <span class="tag">Google Tag Manager</span><span class="tag">Google Analytics</span><span class="tag">Looker Studio</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section case-nav-section">
+    <div class="container">
+      <div class="case-nav">
+        
+        <a href="../../projects/cockpit-gms/index.html" class="case-nav-link case-nav-prev">
+          <span class="case-nav-label">← Projeto anterior</span>
+          <span class="case-nav-title">Cockpit GMS</span>
+        </a>
+        
+        <span></span>
+      </div>
+      <div class="case-back-home">
+        <a href="../../index.html" class="btn btn-outline">Voltar ao portfólio</a>
+        <a href="mailto:luiizriibeiro@icloud.com" class="btn btn-primary">Falar comigo</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <p>© <span id="year"></span> Luiz Ribeiro. Feito com Python + Jinja2.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+<!-- Lightbox para screenshots -->
+<div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
+  <img class="lightbox-img" id="lightboxImg" alt="">
+</div>
+
+<script src="../../static/js/script.js"></script>
+</body>
+</html>
